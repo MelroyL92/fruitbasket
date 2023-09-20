@@ -1,0 +1,62 @@
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.child-container {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    margin:  10px 20px;
+    padding: 0px 5px;
+    flex-basis: 50px;
+    width: 40vw;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+.parentClassForm{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    padding: 10px 10px;
+
+}
+
+.child-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding: 0px 10px;
+
+}
+
+label{
+    margin: 5px
+}
+
+input {
+    display: flex;
+}
+
+button {
+    margin: 5px 5px;
+}
+
+
+
+
+
+
+
+
