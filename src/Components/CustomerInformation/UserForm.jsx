@@ -1,6 +1,7 @@
 import {useForm, useController} from "react-hook-form";
-import React from "react";
+import React, {useState} from "react";
 import Select from "react-select";
+
 
 const deliveryOptions = [
     {value: 'weekly', label: 'Weekly'},
@@ -21,8 +22,6 @@ const UserForm = ({onSave, formData = {}}) => {
     const changeHandler = (deliveryOptions) => {
         field.onChange(deliveryOptions.value)
     }
-
-
 
 
     const {field} = useController({name: 'deliveryFrequency', control})
@@ -82,8 +81,10 @@ const UserForm = ({onSave, formData = {}}) => {
                     />
                 </label>
                 <label htmlFor="deliveryPeriod">Delivery time
-                    <input type="radio" id="deliveryPeriod" {...register("deliveryPeriod")}/> Overdag
-                    <input type="radio" id="deliveryPeriod" {...register("deliveryPeriod")}/> 's Avonds
+                    <input type="radio" id="deliveryPeriod" value="overdag" {...register("deliveryPeriod")}
+                    /> Overdag
+                    <input type="radio" id="deliveryPeriod" value="avond" {...register("deliveryPeriod")}
+                    /> 's Avonds
                 </label>
                 <label htmlFor="Comments">Comments
                     <textarea {...register("comments")} id="comments" cols="30" rows="4"/>
